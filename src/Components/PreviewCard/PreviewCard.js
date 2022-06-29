@@ -7,12 +7,12 @@ function PreviewCard(props){
             <Container maxWidth={props.maxWidth} maxHeight={props.maxHeight}>
                 <Image src={props.image} />
                 <InfoBox>
-                    <CategoryText>PERFUME</CategoryText>
-                    <TitleText>Gabrielle Essence Eau De Parfum</TitleText>
-                    <AboutText>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</AboutText>
+                    <CategoryText>{props.category}</CategoryText>
+                    <TitleText>{props.title}</TitleText>
+                    <AboutText>{props.about}</AboutText>
                     <PriceBox>
-                        <PriceText>$149.99</PriceText>
-                        <PriceText old>$169.99</PriceText>
+                        <PriceText>{props.currentPrice}</PriceText>
+                        <PriceText old>{props.oldPrice}</PriceText>
                     </PriceBox>
                     <CartButton>
                         <CartIcon>
