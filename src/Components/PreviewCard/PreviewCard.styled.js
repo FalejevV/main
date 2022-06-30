@@ -96,7 +96,7 @@ export const TitleText = styled.h2`
     font-family: 'Fraunces';
     font-style: normal;
     font-weight: 700;
-    font-size: 31px;
+    font-size: 32px;
     
     color: #1C232B;
 
@@ -195,7 +195,7 @@ export const PriceText = styled.div`
 `
 
 export const CartButton = styled.button`
-    background-color: #1A4032;
+    background-color: #3D8168;
     border-radius: 8px;
     width:100%;
     min-height:48px;
@@ -210,11 +210,9 @@ export const CartButton = styled.button`
 
     transition: all 0.3s;
     &:hover{
-        background-color: #3D8168;
+        background-color: #1A4032;
     }
-`
 
-export const CartText = styled.p`
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -223,7 +221,6 @@ export const CartText = styled.p`
 
     color: #FFFFFF;
 `
-
 export const CartIcon = styled.svg`
     width:14px;
     height:16px;
