@@ -3,6 +3,7 @@ import cardImage from "./Components/PreviewCard/img/imageD.jpg"
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Homepage from "./Components/Homepage/Homepage";
+import Rating from "./Components/Rating/Rating";
 
 function App() {
   return (
@@ -17,8 +18,11 @@ function App() {
                 about="A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL."
                 currentPrice="$149.99"
                 oldPrice="$169.99"
-            />
+              />
           }/>
+          <Route path ="/main/rating" element={
+              <Rating />
+            }/>
         </Routes>
       </>
   );

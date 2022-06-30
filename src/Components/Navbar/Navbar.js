@@ -6,6 +6,7 @@ function Navbar(){
         <NavbarContainer>
             <NavbarLink to="/">Home</NavbarLink>
             <NavbarLink to="main/card">Preview Card</NavbarLink>
+            <NavbarLink to="main/rating">Rating Component</NavbarLink>
         </NavbarContainer>
     )
 }
