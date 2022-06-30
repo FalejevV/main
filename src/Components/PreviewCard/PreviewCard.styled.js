@@ -72,6 +72,11 @@ export const InfoBox = styled.div`
         width:100%;
         padding: 24px;
     }
+
+    @media(max-height: 480px){
+        overflow: scroll;
+        overflow-x: hidden;
+    }
 `
 
 export const CategoryText = styled.p`
