@@ -22,3 +22,10 @@ export const WTFImage = styled.img`
     z-index: 1000;
     cursor:pointer;
 `
+
+export const PSText = styled.p`
+    position: absolute;
+    bottom: 20px;
+    font-size: 20px;
+    color:black;
+`
