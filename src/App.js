@@ -1,12 +1,15 @@
 import PreviewCard from "./Components/PreviewCard/PreviewCard";
 import cardImage from "./Components/PreviewCard/img/imageD.jpg"
 import { Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
+import Homepage from "./Components/Homepage/Homepage";
 
 function App() {
   return (
       <>
+        <Navbar />
         <Routes>
-          <Route exact path="/main" element={<h1></h1>} />
+          <Route exact path="/" element={<Homepage/>} />
           <Route path="/main/card" element={
               <PreviewCard image={cardImage} maxWidth="600px"
                 category="PERFUME"
