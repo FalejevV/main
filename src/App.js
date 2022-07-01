@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Homepage from "./Components/Homepage/Homepage";
 import Rating from "./Components/Rating/Rating";
+import Expenses from "./Components/Expenses/Expenses";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
           }/>
           <Route path ="/main/rating" element={
               <Rating />
+            }/>
+          <Route path ="/main/expenses" element={
+              <Expenses />
             }/>
         </Routes>
       </>

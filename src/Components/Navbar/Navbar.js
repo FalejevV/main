@@ -7,6 +7,7 @@ function Navbar(){
             <NavbarLink to="/">Home</NavbarLink>
             <NavbarLink to="main/card">Preview Card</NavbarLink>
             <NavbarLink to="main/rating">Rating Component</NavbarLink>
+            <NavbarLink to="main/expenses">Expenses chart</NavbarLink>
         </NavbarContainer>
     )
 }
