@@ -6,6 +6,7 @@ import Homepage from "./Components/Homepage/Homepage";
 import Rating from "./Components/Rating/Rating";
 import Expenses from "./Components/Expenses/Expenses";
 import Snap from "./Components/Snap/Snap";
+import Advice from "./Components/Advices/Advice";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
           }/>
           <Route path ="/main/snap" element={
               <Snap />
+            }/>
+          <Route path ="/main/advice" element={
+              <Advice />
             }/>
         </Routes>
       </>

@@ -277,7 +277,7 @@ export const Hero = styled.section`
 
     @media(max-width:860px){
         flex-direction: column-reverse;
-        padding:10px 0px;
+        padding:10px 0px;  
         gap:60px;
     }
 `

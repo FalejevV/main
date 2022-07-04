@@ -11,6 +11,7 @@ function Navbar(){
             <NavbarLink onClick={() => setVisible(false)} to="main/rating">Rating Component</NavbarLink>
             <NavbarLink onClick={() => setVisible(false)} to="main/expenses">Expenses chart</NavbarLink>
             <NavbarLink onClick={() => setVisible(false)} to="main/snap">Snap section</NavbarLink>
+            <NavbarLink onClick={() => setVisible(false)} to="main/advice">Advice generator</NavbarLink>
         </NavbarContainer>
     )
 }
