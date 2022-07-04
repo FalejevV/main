@@ -265,7 +265,7 @@ export const Hero = styled.section`
     padding:0px 10px;
     gap:100px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 
     @media(max-width:1030px){
         gap:50px;
