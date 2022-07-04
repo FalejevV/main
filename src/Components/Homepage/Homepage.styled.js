@@ -8,11 +8,13 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding:20px;
 `
 
 export const WTFText = styled.h1`
     color:black;
     cursor:pointer;
+    text-align: center;
 `
 
 export const WTFImage = styled.img`
@@ -28,4 +30,5 @@ export const PSText = styled.p`
     bottom: 20px;
     font-size: 20px;
     color:black;
+    text-align: center;
 `
