@@ -7,6 +7,7 @@ import Rating from "./Components/Rating/Rating";
 import Expenses from "./Components/Expenses/Expenses";
 import Snap from "./Components/Snap/Snap";
 import Advice from "./Components/Advices/Advice";
+import Calculator from "./Components/Calculator/Calculator";
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
           <Route path ="/main/advice" element={
               <Advice />
             }/>
+          <Route path ="/main/calculator" element={
+            <Calculator />
+          }/>
         </Routes>
       </>
   );
