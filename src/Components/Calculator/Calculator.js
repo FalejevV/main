@@ -7,7 +7,7 @@ function Calculator(){
     const [value, setValue] = React.useState("");
     const [stringValue, setStringValue] = React.useState("");
     const [selectedOperation, setSelectedOperation] = React.useState("");
-    const [dotUsed,setDotUsed] = React.useState(9999);
+    const [dotUsed,setDotUsed] = React.useState(false);
     const [tempResult, setTempResult] = React.useState("");
 
     React.useEffect(() => {
@@ -21,9 +21,7 @@ function Calculator(){
         value.toString().split('').forEach((number) => {
             resultValue += number
         });
-        if(dotFound === false){
-            setDotUsed(9999);
-        }
+        setDotUsed(dotFound);
         setStringValue(resultValue);
 
     }, [value, dotUsed]);
@@ -43,9 +41,9 @@ function Calculator(){
             if(prevValue.toString().length === 0 && prevValue === 0){
                 return value;
             }else{
-                if(value === "." && dotUsed < 9999){
+                if(value === "." && dotUsed){
                     return prevValue + "";
-                }else if( value === "." && dotUsed === 9999){
+                }else if( value === "." && !dotUsed){
                     setDotUsed(prevValue.toString().length);
                     return prevValue + "" + value;
                 }
@@ -118,7 +116,7 @@ function Calculator(){
                     </ThemeControllerContainer>
                 </TopBar>
                 <Display themeId={currentTheme}>
-                    {stringValue}
+                    {Number(stringValue).toLocaleString('en-IN',{maximumFractionDigits: 20})}
                     {selectedOperation !== "" && <OperationIndicator themeId={currentTheme}>{tempResult} {selectedOperation} </OperationIndicator>}
                 </Display>
                 <KeyboardContainer themeId={currentTheme}>
