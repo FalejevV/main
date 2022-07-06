@@ -139,7 +139,7 @@ export const Display = styled.div`
     padding: 10px 35px;
     padding-top:15px;
     position: relative;
-
+    overflow:hidden;
     @media (max-width: 450px){
         height:100px;
     }
