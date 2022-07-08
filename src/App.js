@@ -8,6 +8,7 @@ import Expenses from "./Components/Expenses/Expenses";
 import Snap from "./Components/Snap/Snap";
 import Advice from "./Components/Advices/Advice";
 import Calculator from "./Components/Calculator/Calculator";
+import IPTRacker from "./Components/IPTracker/IPTracker";
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
             }/>
           <Route path ="/main/calculator" element={
             <Calculator />
+          }/>
+          <Route path ="/main/tracker" element={
+            <IPTRacker />
           }/>
         </Routes>
       </>

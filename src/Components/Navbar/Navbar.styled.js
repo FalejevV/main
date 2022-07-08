@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import downArrow from "./icon-arrow-down.svg";
 
 export const NavbarContainer = styled.div`
     max-width: 1200px;
-    height:60px;
+    min-height:60px;
+    height:fit-content;
     background-color: white;
     border-radius: 0 0 10px 10px;
     position: absolute;
@@ -20,10 +22,35 @@ export const NavbarContainer = styled.div`
     ${({ visible }) => visible && `
         top:0;
     `}
+    z-index:1000;
+
+`
+
+export const Dropdown = styled.div`
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding:10px 0px;
+    background-color: red;
+    position: absolute;
+    top:55px;
+    left:50%;
+    transform: translate(-50%);
+    border-radius: 0 0 10px 10px;
+    border:2px solid black;
+    border-top:0px;
+    background-color: white;
+    gap:5px;
+    z-index: 1005;
+    @media (max-width: 600px){
+        ${({ active }) => active && `
+            display:flex;
+        `}
+    }
 `
 
 export const NavbarLink = styled(Link)`
-    height:100%;
+    height:58px;
     min-width: 100px;
     width:fit-content;
     color:white;
@@ -36,10 +63,61 @@ export const NavbarLink = styled(Link)`
     align-content: center;
     justify-content: center;
     transition: all 0.3s;
-
+    white-space: nowrap;
     font-family: 'Roboto', sans-serif;
+    position: relative;
     &:hover{
         transform: scale(1.1);
+    };
+`
+
+export const NavbarDropdownItem = styled.div`
+    height:58px;
+    min-width: 100px;
+    width:fit-content;
+    color:white;
+    text-decoration: none;
+    font-size:20px;
+    color:black;
+    padding:0px 20px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    transition: all 0.3s;
+    white-space: nowrap;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    &:hover{
+        transform: scale(1.1);
+        ${Dropdown}{
+            display: flex;
+        }
+    };
+
+    ${({ dropdown }) => dropdown && `
+    padding-right:20px;
+
+    &:after{
+        transition: all 0.3s;
+        content: url(${downArrow});
+        position:absolute;
+        right:5px;
+        padding-bottom:5px;
+    }
+    &:hover{
+         &:after{
+            transform: translate(0px, 3px) rotate(180deg) ;
+        }
+    }
+`};
+
+    @media(max-width:600px){
+        ${({ active }) => active && `
+            &:after{
+                transform: translate(0px, 3px) rotate(180deg);
+            }
+        `}
     }
 `
 
