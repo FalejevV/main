@@ -88,6 +88,7 @@ export const NavbarDropdownItem = styled.div`
     white-space: nowrap;
     font-family: 'Roboto', sans-serif;
     position: relative;
+    cursor:pointer;
     &:hover{
         transform: scale(1.1);
         ${Dropdown}{
