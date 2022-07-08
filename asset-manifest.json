@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.js": "/main/static/js/main.acbdb616.js",
+    "main.js": "/main/static/js/main.f91d8f08.js",
     "static/js/787.deeec6c3.chunk.js": "/main/static/js/787.deeec6c3.chunk.js",
     "static/media/image-hero-desktop.png": "/main/static/media/image-hero-desktop.50cc22fddeb0c072b414.png",
+    "static/media/pattern-bg.png": "/main/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
     "static/media/image-hero-mobile.png": "/main/static/media/image-hero-mobile.adefc8b1bbed2ca80470.png",
     "static/media/imageD.jpg": "/main/static/media/imageD.c96d43af17111fe78e96.jpg",
     "static/media/sorry.jpg": "/main/static/media/sorry.5fde421573d06fda3007.jpg",
     "index.html": "/main/index.html",
     "static/media/icon-dice.svg": "/main/static/media/icon-dice.08691e4c24c11b5ba564e06b1f6bcbf3.svg",
     "static/media/icon-arrow-down.svg": "/main/static/media/icon-arrow-down.bebf05132571af33611ede9cdfdbed0f.svg",
-    "main.acbdb616.js.map": "/main/static/js/main.acbdb616.js.map",
+    "main.f91d8f08.js.map": "/main/static/js/main.f91d8f08.js.map",
     "787.deeec6c3.chunk.js.map": "/main/static/js/787.deeec6c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.acbdb616.js"
+    "static/js/main.f91d8f08.js"
   ]
 }
