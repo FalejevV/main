@@ -1,9 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-body{
-    overflow-x: hidden;
-}
+    body,html{
+        overflow-x: hidden;
+    }
     *{
         padding:0;
         margin:0;

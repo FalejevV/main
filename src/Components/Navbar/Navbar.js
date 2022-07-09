@@ -23,6 +23,7 @@ function Navbar(){
                 <Dropdown active={activeDropdown === 1}>
                     <NavbarLink onClick={() => setVisible(false)} to="main/card">Preview Card</NavbarLink>
                     <NavbarLink onClick={() => setVisible(false)} to="main/rating">Rating Component</NavbarLink>
+                    <NavbarLink onClick={() => setVisible(false)} to="main/3columns">3 columns</NavbarLink>
                 </Dropdown>
             </NavbarDropdownItem>
             

@@ -9,6 +9,7 @@ import Snap from "./Components/Snap/Snap";
 import Advice from "./Components/Advices/Advice";
 import Calculator from "./Components/Calculator/Calculator";
 import IPTRacker from "./Components/IPTracker/IPTracker";
+import Columns from "./Components/3Columns/Columns";
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
           }/>
           <Route path ="/main/tracker" element={
             <IPTRacker />
+          }/>
+          <Route path ="/main/3columns" element={
+            <Columns />
           }/>
         </Routes>
       </>
