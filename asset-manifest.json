@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/main/static/js/main.f91d8f08.js",
+    "main.js": "/main/static/js/main.74e4ff99.js",
     "static/js/787.deeec6c3.chunk.js": "/main/static/js/787.deeec6c3.chunk.js",
     "static/media/image-hero-desktop.png": "/main/static/media/image-hero-desktop.50cc22fddeb0c072b414.png",
     "static/media/pattern-bg.png": "/main/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
@@ -8,12 +8,15 @@
     "static/media/imageD.jpg": "/main/static/media/imageD.c96d43af17111fe78e96.jpg",
     "static/media/sorry.jpg": "/main/static/media/sorry.5fde421573d06fda3007.jpg",
     "index.html": "/main/index.html",
+    "static/media/icon-luxury.svg": "/main/static/media/icon-luxury.7d6e1aefdc39c4742fbb039e7f97a503.svg",
+    "static/media/icon-suvs.svg": "/main/static/media/icon-suvs.058b664c311101933ebda84111ddd9b6.svg",
+    "static/media/icon-sedans.svg": "/main/static/media/icon-sedans.e794502801c486bcffc3513f6f03141e.svg",
     "static/media/icon-dice.svg": "/main/static/media/icon-dice.08691e4c24c11b5ba564e06b1f6bcbf3.svg",
     "static/media/icon-arrow-down.svg": "/main/static/media/icon-arrow-down.bebf05132571af33611ede9cdfdbed0f.svg",
-    "main.f91d8f08.js.map": "/main/static/js/main.f91d8f08.js.map",
+    "main.74e4ff99.js.map": "/main/static/js/main.74e4ff99.js.map",
     "787.deeec6c3.chunk.js.map": "/main/static/js/787.deeec6c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.f91d8f08.js"
+    "static/js/main.74e4ff99.js"
   ]
 }
