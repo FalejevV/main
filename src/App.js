@@ -10,6 +10,7 @@ import Advice from "./Components/Advices/Advice";
 import Calculator from "./Components/Calculator/Calculator";
 import IPTRacker from "./Components/IPTracker/IPTracker";
 import Columns from "./Components/3Columns/Columns";
+import Tips from "./Components/Tips/Tips";
 
 function App() {
   return (
@@ -46,6 +47,10 @@ function App() {
           }/>
           <Route path ="/main/3columns" element={
             <Columns />
+          }/>
+
+          <Route path ="/main/tips" element={
+            <Tips />
           }/>
         </Routes>
       </>

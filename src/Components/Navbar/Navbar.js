@@ -33,6 +33,7 @@ function Navbar(){
                     <NavbarLink onClick={() => setVisible(false)} to="main/expenses">Expenses chart</NavbarLink>
                     <NavbarLink onClick={() => setVisible(false)} to="main/snap">Snap section</NavbarLink>
                     <NavbarLink onClick={() => setVisible(false)} to="main/advice">Advice generator</NavbarLink>
+                    <NavbarLink onClick={() => setVisible(false)} to="main/tips">Tip calculator</NavbarLink>
                 </Dropdown>
             </NavbarDropdownItem>
 
