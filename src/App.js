@@ -11,6 +11,7 @@ import Calculator from "./Components/Calculator/Calculator";
 import IPTRacker from "./Components/IPTracker/IPTracker";
 import Columns from "./Components/3Columns/Columns";
 import Tips from "./Components/Tips/Tips";
+import TimeDashboard from "./Components/TimeDashboard/TimeDashboard";
 
 function App() {
   return (
@@ -51,6 +52,10 @@ function App() {
 
           <Route path ="/main/tips" element={
             <Tips />
+          }/>
+
+           <Route path ="/main/tdashboard" element={
+            <TimeDashboard />
           }/>
         </Routes>
       </>
