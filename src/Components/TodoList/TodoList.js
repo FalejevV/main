@@ -17,7 +17,7 @@ function TodoList(){
     const [width, setWidth] = React.useState(window.innerWidth);
     const [inputData, setInputData] = React.useState("");
     const [listFilter, setListFilter] = React.useState("All");
-    const [theme, setTheme] = React.useState(0);
+    const [theme, setTheme] = React.useState(1);
     const [todoList, setTodoList] = React.useState([
         {
             title: "Complete online JavaScript course",
