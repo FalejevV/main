@@ -12,6 +12,7 @@ import IPTRacker from "./Components/IPTracker/IPTracker";
 import Columns from "./Components/3Columns/Columns";
 import Tips from "./Components/Tips/Tips";
 import TimeDashboard from "./Components/TimeDashboard/TimeDashboard";
+import TodoList from "./Components/TodoList/TodoList";
 
 function App() {
   return (
@@ -57,6 +58,11 @@ function App() {
            <Route path ="/main/tdashboard" element={
             <TimeDashboard />
           }/>
+
+          <Route path ="/main/todo" element={
+            <TodoList />
+          }/>
+
         </Routes>
       </>
   );

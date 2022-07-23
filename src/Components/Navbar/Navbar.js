@@ -43,6 +43,7 @@ function Navbar(){
                 <Dropdown active={activeDropdown === 3}>
                     <NavbarLink onClick={() => setVisible(false)} to="main/calculator">Calculator</NavbarLink>
                     <NavbarLink onClick={() => setVisible(false)} to="main/tracker">IP tracker</NavbarLink>
+                    <NavbarLink onClick={() => setVisible(false)} to="main/todo">Todo List</NavbarLink>
                 </Dropdown>
             </NavbarDropdownItem>
             
