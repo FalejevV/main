@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/main/static/js/main.1abd8742.js",
+    "main.js": "/main/static/js/main.b29578a6.js",
     "static/js/787.deeec6c3.chunk.js": "/main/static/js/787.deeec6c3.chunk.js",
     "static/media/image-hero-desktop.png": "/main/static/media/image-hero-desktop.50cc22fddeb0c072b414.png",
     "static/media/pattern-bg.png": "/main/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
@@ -10,6 +10,7 @@
     "static/media/bg-desktop-dark.jpg": "/main/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
     "static/media/sorry.jpg": "/main/static/media/sorry.5fde421573d06fda3007.jpg",
     "static/media/image-jeremy.png": "/main/static/media/image-jeremy.71cd41f11bee24c1ded3.png",
+    "static/media/bg-stars.svg": "/main/static/media/bg-stars.166881a1c03d6b1239f5dc4250bf85ad.svg",
     "index.html": "/main/index.html",
     "static/media/icon-luxury.svg": "/main/static/media/icon-luxury.7d6e1aefdc39c4742fbb039e7f97a503.svg",
     "static/media/icon-suvs.svg": "/main/static/media/icon-suvs.058b664c311101933ebda84111ddd9b6.svg",
@@ -20,6 +21,7 @@
     "static/media/icon-study.svg": "/main/static/media/icon-study.1f0a65e457bfa63988275be35e86407e.svg",
     "static/media/icon-play.svg": "/main/static/media/icon-play.e8d4e5699b0e441f8baf9e7692e15167.svg",
     "static/media/icon-person.svg": "/main/static/media/icon-person.65bfd20465dd1d2cb58c0b53e1160442.svg",
+    "static/media/pattern-hills.svg": "/main/static/media/pattern-hills.815d688fd937623063b5c111be9fc999.svg",
     "static/media/icon-work.svg": "/main/static/media/icon-work.a3f124e593ab45ba795f6a068fe710ce.svg",
     "static/media/icon-self-care.svg": "/main/static/media/icon-self-care.a161aff589038fc7ce09296497d4cd62.svg",
     "static/media/icon-sun.svg": "/main/static/media/icon-sun.910b1f9a23741afc341e95653a51f14f.svg",
@@ -29,10 +31,10 @@
     "static/media/icon-ellipsis.svg": "/main/static/media/icon-ellipsis.a57a4ac863593bb69d31b4399823f745.svg",
     "static/media/icon-check.svg": "/main/static/media/icon-check.a8fb15d0278c8e312df5fc8364fef863.svg",
     "static/media/icon-arrow-down.svg": "/main/static/media/icon-arrow-down.bebf05132571af33611ede9cdfdbed0f.svg",
-    "main.1abd8742.js.map": "/main/static/js/main.1abd8742.js.map",
+    "main.b29578a6.js.map": "/main/static/js/main.b29578a6.js.map",
     "787.deeec6c3.chunk.js.map": "/main/static/js/787.deeec6c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.1abd8742.js"
+    "static/js/main.b29578a6.js"
   ]
 }
