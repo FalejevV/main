@@ -6,10 +6,12 @@ function Navbar(){
     const [activeDropdown, setActiveDropdown] = React.useState(0);
 
     function toggleDropdown(value){
-        if(activeDropdown === value){
-            setActiveDropdown(0);
-        }else{
-            setActiveDropdown(value)
+        if(window.innerWidth < 800){
+            if(activeDropdown === value){
+                setActiveDropdown(0);
+            }else{
+                setActiveDropdown(value)
+            }
         }
     }
     return(
