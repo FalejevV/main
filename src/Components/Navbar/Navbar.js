@@ -30,11 +30,11 @@ function Navbar(){
             <NavbarDropdownItem to="#" dropdown onClick={() => toggleDropdown(2)} active={activeDropdown === 2}>
                 Junior
                 <Dropdown active={activeDropdown === 2}>
-                    <NavbarLink onClick={() => setVisible(false)} to="main/expenses">Expenses chart</NavbarLink>
-                    <NavbarLink onClick={() => setVisible(false)} to="main/snap">Snap section</NavbarLink>
-                    <NavbarLink onClick={() => setVisible(false)} to="main/advice">Advice generator</NavbarLink>
-                    <NavbarLink onClick={() => setVisible(false)} to="main/tips">Tip calculator</NavbarLink>
-                    <NavbarLink onClick={() => setVisible(false)} to="main/tdashboard">Time dashboard</NavbarLink>
+                    <NavbarLink onClick={() => setVisible(false)} to="main/expenses">Expenses Chart</NavbarLink>
+                    <NavbarLink onClick={() => setVisible(false)} to="main/snap">Snap Section</NavbarLink>
+                    <NavbarLink onClick={() => setVisible(false)} to="main/advice">Advice Generator</NavbarLink>
+                    <NavbarLink onClick={() => setVisible(false)} to="main/tips">Tip Calculator</NavbarLink>
+                    <NavbarLink onClick={() => setVisible(false)} to="main/tdashboard">Time Dashboard</NavbarLink>
                 </Dropdown>
             </NavbarDropdownItem>
 
@@ -42,8 +42,9 @@ function Navbar(){
                 Intermediate
                 <Dropdown active={activeDropdown === 3}>
                     <NavbarLink onClick={() => setVisible(false)} to="main/calculator">Calculator</NavbarLink>
-                    <NavbarLink onClick={() => setVisible(false)} to="main/tracker">IP tracker</NavbarLink>
+                    <NavbarLink onClick={() => setVisible(false)} to="main/tracker">IP Tracker</NavbarLink>
                     <NavbarLink onClick={() => setVisible(false)} to="main/todo">Todo List</NavbarLink>
+                    <NavbarLink onClick={() => setVisible(false)} to="main/timer">Countdown Timer</NavbarLink>
                 </Dropdown>
             </NavbarDropdownItem>
             

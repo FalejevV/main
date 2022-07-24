@@ -101,7 +101,7 @@ function TodoList(){
                     <TodoElement key={nanoid()} theme={theme}>
                             <CircleDecoration onClick={() => triggerTodo(index)} theme={theme} checked={item.done} checkable checkImage={checkIcon}></CircleDecoration>
                             <TodoTitle checked={item.done} theme={theme}>{item.title}</TodoTitle>
-                            <TodoCloseIcon onClick={() => removeTodo(index)} src={closeIcon} />
+                            <TodoCloseIcon alt="close-icon" onClick={() => removeTodo(index)} src={closeIcon} />
                     </TodoElement>
                     <Divider key={nanoid()} theme={theme} />
                 </PlaceholderDiv>
@@ -155,9 +155,9 @@ function TodoList(){
                 <TopContainer>
                     <Title>TODO</Title>
                     {theme === 0 ?
-                        <ThemeSwitchImage onClick={() => setTheme(1)} src={iconMoon}/>
+                        <ThemeSwitchImage alt="theme-switch" onClick={() => setTheme(1)} src={iconMoon}/>
                         :
-                        <ThemeSwitchImage onClick={() => setTheme(0)} src={iconSun} />
+                        <ThemeSwitchImage alt="theme-switch" onClick={() => setTheme(0)} src={iconSun} />
                     }
                 </TopContainer>
                 <InputFieldContainer>

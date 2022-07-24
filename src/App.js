@@ -13,6 +13,7 @@ import Columns from "./Components/3Columns/Columns";
 import Tips from "./Components/Tips/Tips";
 import TimeDashboard from "./Components/TimeDashboard/TimeDashboard";
 import TodoList from "./Components/TodoList/TodoList";
+import CountdownTimer from "./Components/CountdownTimer/CountdownTimer";
 
 function App() {
   return (
@@ -62,6 +63,11 @@ function App() {
           <Route path ="/main/todo" element={
             <TodoList />
           }/>
+
+          <Route path ="/main/timer" element={
+            <CountdownTimer />
+          }/>
+
 
         </Routes>
       </>
