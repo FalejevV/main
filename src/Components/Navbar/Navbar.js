@@ -47,6 +47,7 @@ function Navbar(){
                     <NavbarLink onClick={() => setVisible(false)} to="main/tracker">IP Tracker</NavbarLink>
                     <NavbarLink onClick={() => setVisible(false)} to="main/todo">Todo List</NavbarLink>
                     <NavbarLink onClick={() => setVisible(false)} to="main/timer">Countdown Timer</NavbarLink>
+                    <NavbarLink onClick={() => setVisible(false)} to="main/joblist">Job Listings</NavbarLink>
                 </Dropdown>
             </NavbarDropdownItem>
             

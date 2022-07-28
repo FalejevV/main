@@ -14,6 +14,7 @@ import Tips from "./Components/Tips/Tips";
 import TimeDashboard from "./Components/TimeDashboard/TimeDashboard";
 import TodoList from "./Components/TodoList/TodoList";
 import CountdownTimer from "./Components/CountdownTimer/CountdownTimer";
+import JobListings from "./Components/JobListings/JobListings";
 
 function App() {
   return (
@@ -68,6 +69,10 @@ function App() {
             <CountdownTimer />
           }/>
 
+          
+          <Route path ="/main/joblist" element={
+            <JobListings />
+          }/>
 
         </Routes>
       </>
