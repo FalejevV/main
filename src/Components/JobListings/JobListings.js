@@ -9,7 +9,7 @@ import SearchBar from "./SearchBar";
 import { nanoid } from "nanoid";
 
 function JobListings(){
-    const [tagList, setTaglist] = React.useState(["Frontend", "CSS", "JavaScript"]);
+    const [tagList, setTaglist] = React.useState([]);
     const [width, setWidth] = React.useState(window.innerWidth);
     function addTag(tagName){
         if(!tagList.find(item => item === tagName)){
