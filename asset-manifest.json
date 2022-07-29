@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/main/static/js/main.6fbab5fe.js",
+    "main.js": "/main/static/js/main.f74689bb.js",
     "static/js/787.deeec6c3.chunk.js": "/main/static/js/787.deeec6c3.chunk.js",
     "static/media/image-hero-desktop.png": "/main/static/media/image-hero-desktop.50cc22fddeb0c072b414.png",
     "static/media/pattern-bg.png": "/main/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
@@ -10,10 +10,21 @@
     "static/media/bg-desktop-dark.jpg": "/main/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
     "static/media/sorry.jpg": "/main/static/media/sorry.5fde421573d06fda3007.jpg",
     "static/media/image-jeremy.png": "/main/static/media/image-jeremy.71cd41f11bee24c1ded3.png",
+    "static/media/loop-studios.svg": "/main/static/media/loop-studios.7778c957c5751d1502cc.svg",
+    "static/media/photosnap.svg": "/main/static/media/photosnap.5a867c13a374d62b400f.svg",
+    "static/media/manage.svg": "/main/static/media/manage.5a528a9669728fb94c8c.svg",
+    "static/media/insure.svg": "/main/static/media/insure.4d535e7e02c25d02b163.svg",
+    "static/media/account.svg": "/main/static/media/account.903d6cd02abadf4b4d60.svg",
+    "static/media/eyecam-co.svg": "/main/static/media/eyecam-co.0abb14e8a292eed471d5.svg",
     "static/media/bg-stars.svg": "/main/static/media/bg-stars.166881a1c03d6b1239f5dc4250bf85ad.svg",
     "index.html": "/main/index.html",
+    "static/media/shortly.svg": "/main/static/media/shortly.3c01b577742e2648f6f9.svg",
+    "static/media/myhome.svg": "/main/static/media/myhome.aaaaa430346f24f652d5.svg",
+    "static/media/the-air-filter-company.svg": "/main/static/media/the-air-filter-company.9b55f6443c39f7b79348.svg",
+    "static/media/bg-header-desktop.svg": "/main/static/media/bg-header-desktop.752d0faf14c00c6fb55f968b61e827e0.svg",
     "static/media/icon-luxury.svg": "/main/static/media/icon-luxury.7d6e1aefdc39c4742fbb039e7f97a503.svg",
     "static/media/icon-suvs.svg": "/main/static/media/icon-suvs.058b664c311101933ebda84111ddd9b6.svg",
+    "static/media/faceit.svg": "/main/static/media/faceit.54a148ce9e8793ff767e.svg",
     "static/media/icon-sedans.svg": "/main/static/media/icon-sedans.e794502801c486bcffc3513f6f03141e.svg",
     "static/media/icon-dollar.svg": "/main/static/media/icon-dollar.9f9be3534a9295a6595764d63a7bf3a3.svg",
     "static/media/icon-exercise.svg": "/main/static/media/icon-exercise.3e7b028289414a13231843557ae074f7.svg",
@@ -25,16 +36,18 @@
     "static/media/icon-work.svg": "/main/static/media/icon-work.a3f124e593ab45ba795f6a068fe710ce.svg",
     "static/media/icon-self-care.svg": "/main/static/media/icon-self-care.a161aff589038fc7ce09296497d4cd62.svg",
     "static/media/icon-sun.svg": "/main/static/media/icon-sun.910b1f9a23741afc341e95653a51f14f.svg",
+    "static/media/bg-header-mobile.svg": "/main/static/media/bg-header-mobile.b7750a0c3e0c016763b9a1fbcf1c340d.svg",
     "static/media/icon-dice.svg": "/main/static/media/icon-dice.08691e4c24c11b5ba564e06b1f6bcbf3.svg",
     "static/media/icon-moon.svg": "/main/static/media/icon-moon.6c03114b495d05f4380b3c544d9afe2a.svg",
+    "static/media/icon-remove.svg": "/main/static/media/icon-remove.70c075ce001e5ccae7c68a570c4b7bc0.svg",
     "static/media/icon-cross.svg": "/main/static/media/icon-cross.6ee81d30b75cab19d6f7314624fcc4d6.svg",
     "static/media/icon-ellipsis.svg": "/main/static/media/icon-ellipsis.a57a4ac863593bb69d31b4399823f745.svg",
     "static/media/icon-check.svg": "/main/static/media/icon-check.a8fb15d0278c8e312df5fc8364fef863.svg",
     "static/media/icon-arrow-down.svg": "/main/static/media/icon-arrow-down.bebf05132571af33611ede9cdfdbed0f.svg",
-    "main.6fbab5fe.js.map": "/main/static/js/main.6fbab5fe.js.map",
+    "main.f74689bb.js.map": "/main/static/js/main.f74689bb.js.map",
     "787.deeec6c3.chunk.js.map": "/main/static/js/787.deeec6c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.6fbab5fe.js"
+    "static/js/main.f74689bb.js"
   ]
 }
