@@ -10,7 +10,7 @@ import { nanoid } from "nanoid";
 
 function JobListings(){
     const [tagList, setTaglist] = React.useState(["Frontend", "CSS", "JavaScript"]);
-    
+    const [width, setWidth] = React.useState(window.innerWidth);
     function addTag(tagName){
         if(!tagList.find(item => item === tagName)){
             setTaglist(prevTaglist => {
@@ -20,6 +20,18 @@ function JobListings(){
             })
         }
     }
+
+    React.useEffect(() => {
+        window.addEventListener('resize', function(event) {
+            setWidth(window.innerWidth);
+        }, true);
+
+        return () => {
+            window.removeEventListener('resize', function(event) {
+                setWidth(window.innerWidth);
+            }, true);
+        }
+    },[])
 
     function removeTag(tagName){
         if(tagList.find(item => item === tagName)){
@@ -72,7 +84,7 @@ function JobListings(){
 
                 <List shiftDown={tagList.length > 0}>
                     {getFilteredItems().map((item) => {
-                        return <ListItem key={nanoid()} addTag={addTag} data={item} />
+                        return <ListItem hr={width <= 950} key={nanoid()} addTag={addTag} data={item} />
                     })}
                 </List>
             </Container>

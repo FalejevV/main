@@ -7,7 +7,8 @@ export const Page = styled.div`
     justify-content: center;
     width:100%;
     max-width: 100vw;
-    height:100vh;
+    height: fit-content;
+    min-height: 100vh;
 `
 export const Container = styled.div`
     width: 100%;
@@ -35,9 +36,20 @@ export const List = styled.div`
     max-width: 1130px;
     padding-bottom: 50px;
     padding:0px 10px;
-    margin-top: 40px;
     transition: all 0.3s;
+    margin-top: 40px;
+
+    @media screen and (max-width:950px){
+        transition: all 0s;
+        padding: 0px 20px;
+    }
     ${({ shiftDown }) => shiftDown && `
         margin-top:76px;
+
+        @media screen and (max-width:950px) {
+            margin-top:10px;
+        }
     `}
+
+
 `

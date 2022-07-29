@@ -3,6 +3,16 @@ import styled from "styled-components";
 
 import crossIcon from "./img/icon-remove.svg";
 import { nanoid } from "nanoid";
+import { keyframes } from 'styled-components'
+
+const fadeId = keyframes`
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+`
 
 const Container = styled.div`
     width:100%;
@@ -18,7 +28,30 @@ const Container = styled.div`
     align-items: center;
     justify-content: flex-start;
     font-family: 'League Spartan';
-    gap: 16px;
+
+    opacity: 0;
+    animation: ${fadeId} 0.3s ease-in;
+    animation-fill-mode: forwards;
+
+    @media screen and (max-width:950px) {
+        height: fit-content;
+        position: relative;
+        top:-40px;
+        width:calc(100% - 40px);
+        padding:25px 20px;
+    }
+
+`
+
+const TagContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px;
+
+    @media screen and (max-width:950px) {
+        gap:15px;
+    }
+
 `
 const SearchTag = styled.div`
     display: flex;
@@ -63,17 +96,23 @@ const ClearButton = styled.p`
     &:hover{
         color:#5CA5A5;
     }
+
+    @media screen and (max-width:950px) {
+        padding-right: 10px;
+    }
 `
 
 function SearchBar(props){
     return(
         <Container>
-            {props.tags.map(item => 
-                <SearchTag key={nanoid()}>
-                    <TagText>{item}</TagText>
-                    <TagClose onClick={() => props.removeTag(item)} src={crossIcon}/>
-                </SearchTag>
-            )}
+            <TagContainer>
+                {props.tags.map(item => 
+                    <SearchTag key={nanoid()}>
+                        <TagText>{item}</TagText>
+                        <TagClose onClick={() => props.removeTag(item)} src={crossIcon}/>
+                    </SearchTag>
+                )}
+            </TagContainer>
             <ClearButton onClick={props.clearTags}>Clear</ClearButton>
         </Container>
     )

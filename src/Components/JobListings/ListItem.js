@@ -8,8 +8,8 @@ const Container = styled.div`
     justify-content: flex-start;
     align-items: center;
     gap:24px;
-    padding:32px 40px;
-
+    padding:32px 25px;
+    padding-top: 40px;
     background: #FFFFFF;
     box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
     border-radius: 5px;
@@ -21,10 +21,24 @@ const Container = styled.div`
     `}
 
     font-family: 'League Spartan', sans-serif;
+
+    @media screen and (max-width:950px) {
+        flex-direction: column;
+        height:fit-content;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+    position: relative;
 `
 
 const LogoImage = styled.img`
-    
+    @media screen and (max-width:950px) {
+        width:50px;
+        height:50px;
+        position: absolute;
+        left: 20px;
+        top:-25px;
+    }
 `
 
 const InfoContainer = styled.div`
@@ -32,6 +46,7 @@ const InfoContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     gap:8px;
+
 `
 
 const TitleTab = styled.div`
@@ -55,6 +70,10 @@ const Title = styled.p`
     transition: all 0.3s;
     &:hover{
         filter:brightness(1.1);
+    }
+
+    @media screen and (max-width:950px) {
+        font-size: 16px;
     }
 `
 
@@ -91,6 +110,10 @@ const JobName = styled.p`
     &:hover{
         color: #5CA5A5;
     }
+
+    @media screen and (max-width:950px) {
+        font-size: 16px;
+    }
 `
 
 const DescriptionContainer = styled.div`
@@ -107,6 +130,10 @@ const DesctiptionText = styled.p`
     letter-spacing: -0.138462px;
 
     color: #7C8F8F;
+
+    @media screen and (max-width:950px) {
+        font-size: 15px;
+    }
 `
 
 const DescriptionDivider = styled.div`
@@ -122,6 +149,12 @@ const SearchTagContainer = styled.div`
     align-items: center;
     flex: auto;
     gap:30px;
+    @media screen and (max-width:950px) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap:20px;
+        padding-left: 10px;
+    }
 `
 
 const SearchTag = styled.p`
@@ -159,6 +192,16 @@ const SearchTag = styled.p`
             opacity: 1;
         }
     }
+
+    @media screen and (max-width:950px) {
+        margin-right: 15px;
+    }
+`
+const HR = styled.hr`
+    width:100%;
+    height:1px;
+    background-color: #868C8B;
+
 `
 
 function ListItem(props){
@@ -188,6 +231,7 @@ function ListItem(props){
                     <DesctiptionText>{props.data.location}</DesctiptionText>
                 </DescriptionContainer>
             </InfoContainer>
+            {props.hr && <HR/>}
             <SearchTagContainer>
                 {getSearchTags().map(item => <SearchTag key={nanoid()} onClick={() => props.addTag(item)}>{item}</SearchTag>)}
             </SearchTagContainer>
