@@ -193,7 +193,7 @@ export const Dropdown = styled.div`
     display: flex;
     flex-direction: column;
     position: relative;
-    &:hover, &:active, &:focus{
+    &:hover{
         ${DropdownMenu}{
             display: flex;
         }
