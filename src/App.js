@@ -1,7 +1,6 @@
 import PreviewCard from "./Components/PreviewCard/PreviewCard";
 import cardImage from "./Components/PreviewCard/img/imageD.jpg"
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar/Navbar";
 import Homepage from "./Components/Homepage/Homepage";
 import Rating from "./Components/Rating/Rating";
 import Expenses from "./Components/Expenses/Expenses";
@@ -15,11 +14,12 @@ import TimeDashboard from "./Components/TimeDashboard/TimeDashboard";
 import TodoList from "./Components/TodoList/TodoList";
 import CountdownTimer from "./Components/CountdownTimer/CountdownTimer";
 import JobListings from "./Components/JobListings/JobListings";
+import NavbarNew from "./Components/NavbarNew/NavbarNew";
 
 function App() {
   return (
       <>
-        <Navbar />
+        <NavbarNew />
         <Routes>
           <Route exact path="/" element={<Homepage/>} />
           <Route path="/main/card" element={

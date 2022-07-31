@@ -24,6 +24,17 @@ export const NavbarContainer = styled.div`
     `}
     z-index:1000;
 
+    @media(max-width:800px){
+        left:unset;
+        right:0px;
+        transform: translate(0);
+        top:0;
+        height:100vh;
+        width:100%;
+        max-width:300px;
+        flex-direction: column;
+    }
+
 `
 
 export const Dropdown = styled.div`
@@ -46,6 +57,11 @@ export const Dropdown = styled.div`
         ${({ active }) => active && `
             display:flex;
         `}
+    }
+
+    @media(max-width:800px){
+        position: relative;
+        top:300px;
     }
 `
 
@@ -111,6 +127,11 @@ export const NavbarDropdownItem = styled.div`
             transform: translate(0px, 3px) rotate(180deg) ;
         }
     }
+
+    @media(max-width:800px){
+        flex-direction:column;
+    }
+
 `};
 
     @media(max-width:600px){
@@ -120,6 +141,7 @@ export const NavbarDropdownItem = styled.div`
             }
         `}
     }
+
 `
 
 export const MenuButton = styled.button`
