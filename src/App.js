@@ -15,6 +15,7 @@ import TodoList from "./Components/TodoList/TodoList";
 import CountdownTimer from "./Components/CountdownTimer/CountdownTimer";
 import JobListings from "./Components/JobListings/JobListings";
 import NavbarNew from "./Components/NavbarNew/NavbarNew";
+import Card from "./Components/Card/Card";
 
 function App() {
   return (
@@ -72,6 +73,10 @@ function App() {
           
           <Route path ="/main/joblist" element={
             <JobListings />
+          }/>
+
+          <Route path ="/main/cardform" element={
+            <Card />
           }/>
 
         </Routes>

@@ -25,6 +25,7 @@ function NavbarNew(){
                     <NavLink onClick={toggleMenu} to="main/advice">Advice Generator</NavLink>
                     <NavLink onClick={toggleMenu} to="main/tips">Tip Calculator</NavLink>
                     <NavLink onClick={toggleMenu} to="main/tdashboard">Time Dashboard</NavLink>
+                    <NavLink onClick={toggleMenu} to="main/cardform">Interactive Card Form</NavLink>
                 </DropdownMenu>
             </Dropdown>
             <Dropdown>
