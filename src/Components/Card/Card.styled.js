@@ -19,8 +19,6 @@ export const Container = styled.div`
     justify-content: center;
     gap:120px;
     padding:50px;
-    margin: 0 auto;
-    margin-top:340px;
     @media (max-width: 1060px){
         flex-direction: column;
         margin:0;
