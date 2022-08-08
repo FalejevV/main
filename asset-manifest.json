@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.js": "/main/static/js/main.e93aa8ce.js",
+    "main.js": "/main/static/js/main.ff8ddd35.js",
     "static/js/787.deeec6c3.chunk.js": "/main/static/js/787.deeec6c3.chunk.js",
     "static/media/image-hero-desktop.png": "/main/static/media/image-hero-desktop.50cc22fddeb0c072b414.png",
     "static/media/pattern-bg.png": "/main/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
     "static/media/image-hero-mobile.png": "/main/static/media/image-hero-mobile.adefc8b1bbed2ca80470.png",
     "static/media/imageD.jpg": "/main/static/media/imageD.c96d43af17111fe78e96.jpg",
+    "static/media/bg-main-desktop.png": "/main/static/media/bg-main-desktop.806e7aa7b4dbc1d78bc3.png",
     "static/media/bg-desktop-light.jpg": "/main/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
+    "static/media/bg-card-back.png": "/main/static/media/bg-card-back.23f68fa3aa3d5b33dfc8.png",
     "static/media/bg-desktop-dark.jpg": "/main/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
+    "static/media/bg-card-front.png": "/main/static/media/bg-card-front.8153e2ca184402a8385f.png",
     "static/media/sorry.jpg": "/main/static/media/sorry.5fde421573d06fda3007.jpg",
     "static/media/image-jeremy.png": "/main/static/media/image-jeremy.71cd41f11bee24c1ded3.png",
+    "static/media/bg-main-mobile.png": "/main/static/media/bg-main-mobile.caa4689407777a312ede.png",
     "static/media/loop-studios.svg": "/main/static/media/loop-studios.7778c957c5751d1502cc.svg",
     "static/media/photosnap.svg": "/main/static/media/photosnap.5a867c13a374d62b400f.svg",
     "static/media/manage.svg": "/main/static/media/manage.5a528a9669728fb94c8c.svg",
@@ -38,16 +42,18 @@
     "static/media/icon-sun.svg": "/main/static/media/icon-sun.910b1f9a23741afc341e95653a51f14f.svg",
     "static/media/bg-header-mobile.svg": "/main/static/media/bg-header-mobile.b7750a0c3e0c016763b9a1fbcf1c340d.svg",
     "static/media/icon-dice.svg": "/main/static/media/icon-dice.08691e4c24c11b5ba564e06b1f6bcbf3.svg",
+    "static/media/icon-complete.svg": "/main/static/media/icon-complete.8fd757c0c5c44b1d597ca411400e046d.svg",
+    "static/media/card-logo.svg": "/main/static/media/card-logo.8ca9036515954c3f8191559dce9c7bdf.svg",
     "static/media/icon-moon.svg": "/main/static/media/icon-moon.6c03114b495d05f4380b3c544d9afe2a.svg",
     "static/media/icon-remove.svg": "/main/static/media/icon-remove.70c075ce001e5ccae7c68a570c4b7bc0.svg",
     "static/media/icon-cross.svg": "/main/static/media/icon-cross.6ee81d30b75cab19d6f7314624fcc4d6.svg",
     "static/media/icon-ellipsis.svg": "/main/static/media/icon-ellipsis.a57a4ac863593bb69d31b4399823f745.svg",
     "static/media/icon-check.svg": "/main/static/media/icon-check.a8fb15d0278c8e312df5fc8364fef863.svg",
     "static/media/icon-arrow-down.svg": "/main/static/media/icon-arrow-down.bebf05132571af33611ede9cdfdbed0f.svg",
-    "main.e93aa8ce.js.map": "/main/static/js/main.e93aa8ce.js.map",
+    "main.ff8ddd35.js.map": "/main/static/js/main.ff8ddd35.js.map",
     "787.deeec6c3.chunk.js.map": "/main/static/js/787.deeec6c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e93aa8ce.js"
+    "static/js/main.ff8ddd35.js"
   ]
 }
