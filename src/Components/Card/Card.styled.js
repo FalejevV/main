@@ -7,6 +7,13 @@ export const Page = styled.div`
     background-color: white;
     display: flex;
     font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 1060px){
+        align-items: flex-start;
+    }
 `
 
 export const Container = styled.div`
