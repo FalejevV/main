@@ -39,6 +39,13 @@ function NavbarNew(){
                 </DropdownMenu>
             </Dropdown>
 
+            <Dropdown>
+                <DropdownItem>Advanced</DropdownItem>
+                <DropdownMenu>
+                    <NavLink onClick={toggleMenu} to="main/rockpaperscissors">Rock Paper Scissors</NavLink>
+                </DropdownMenu>
+            </Dropdown>
+
             <ShowButton visible={menuVisible} onClick={toggleMenu}>
                 <span></span>
                 <span></span>
