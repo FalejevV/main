@@ -16,10 +16,17 @@ export const PickImage = styled.img`
         height:126px;
     `}
 
-    @media (max-width:560px){
-        width:60px;
-        height:60px;
+    @media (max-width:1000px){
+        width:75px;
+        height:80px;
     }
+
+    @media (max-width:560px){
+        width:50px;
+        height:50px;
+    }
+
+    
 `
 
 export const PickElement = styled.div`
@@ -69,7 +76,7 @@ export const PickElement = styled.div`
                 background-color: rgba(255, 255, 255, 0.05);
             }
         }
-
+        
         @media (max-width:560px){
             &:before{
                 width:170px;
@@ -94,6 +101,16 @@ export const PickElement = styled.div`
         }
     `};
 
+    @media (max-width:1000px){
+        width:130px;
+        height:130px;
+
+        &:after{
+            width:180px;
+            height:180px;
+        }
+
+    }
 
     @media (max-width:560px){
         width:100px;

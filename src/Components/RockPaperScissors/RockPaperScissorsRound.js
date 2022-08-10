@@ -16,6 +16,12 @@ const GameGrid = styled.div`
     ${({ stretch }) => stretch && `
         grid-template-columns: 250px 200px 250px;
 
+
+        @media (max-width:1000px){
+            grid-template-columns: 60px 140px 60px;
+        }
+
+
         @media (max-width:560px){
             grid-template-columns: 150px 150px;
             grid-template-rows: 32px 150px;
@@ -76,6 +82,10 @@ const PendingPick = styled.div`
 
     animation: 1s ${PendingAnimation} infinite ease-in;
 
+    @media (max-width:1000px){
+        width:160px;
+        height:160px;
+    }
     @media (max-width:560px){
         width:100px;
         height:100px;
