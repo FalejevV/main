@@ -1,7 +1,8 @@
 import React from "react";
-import { Container, Page, StateContainer, StateElement, StateText,TimerText, SvgCircle, TimerBackground, TimerContainer, TitlePomodoro, SettingsSvg, SettingsContainer, SettingsFog, HeaderContainer, SettingsTitle, CloseSvg, TimeSelectionContainer, TimeSelectionTitle, TimeInputContainer } from "./Pomodoro.styled";
+import { Container, Page, StateContainer, StateElement, StateText,TimerText, SvgCircle, TimerBackground, TimerContainer, TitlePomodoro, SettingsSvg, SettingsContainer, SettingsFog, HeaderContainer, SettingsTitle, CloseSvg, TimeSelectionContainer, TimeSelectionTitle, TimeInputContainer, FontSelectionContainer, FontSelectionTitle, FontSelectionButton, ColorSelectionContainer, ColorSelectionTitle, ColorSelectionButton, ApplySettingsButton } from "./Pomodoro.styled";
 import { ThemeProvider } from "styled-components";
 import TimeInput from "./TimeInput";
+import checkIcon from "./img/check-solid.svg";
 
 function Pomodoro(){
     const [theme,setTheme] = React.useState({
@@ -11,18 +12,21 @@ function Pomodoro(){
     const [state,setState] = React.useState("pomodoro");
     const [timerData,setTimerData] = React.useState({
         pomodoro : {
-            starter: 1500,
-            now: 1500,
+            starter: 5,
+            now: 5,
         },
         short : {
-            starter: 300,
-            now: 300,
+            starter: 3,
+            now: 3,
         },
         long: {
-            starter: 900,
-            now: 900,
+            starter: 6,
+            now: 6,
         }
     }) 
+
+    const [breakCounter, setBreakCounter] = React.useState(0);
+
     const [pause,setPause] = React.useState(true);
     const [displaySettings, setDisplaySettings] = React.useState(false);
 
@@ -39,17 +43,52 @@ function Pomodoro(){
                             now : prevTimerData[state].now - 1
                         }
                     }
-                })
+                });
             },1000);
+        }else{
+            if(timerData[state].now < 0){
+                if(state === "pomodoro"){
+                    if(breakCounter < 4){
+                        setBreakCounter(prevCounter => prevCounter+1);
+                        setState("short");
+                    }else if (breakCounter >= 4){
+                        setBreakCounter(0);
+                        setState("long");
+                    }
+                }else{
+                    setState("pomodoro");
+                }
+            }
         }
         return () =>{
             if(timeout){
                 clearTimeout(timeout);
             }
         }
-    },[state,pause,timerData]);
+    },[state,pause,timerData, breakCounter]);
+
+    function refillTimers(){
+        setTimerData(prevTimerData => {
+            return {
+                ...prevTimerData,
+                pomodoro : {
+                    starter : prevTimerData["pomodoro"].starter,
+                    now : prevTimerData["pomodoro"].starter
+                },
+                short : {
+                    starter : prevTimerData["short"].starter,
+                    now : prevTimerData["short"].starter
+                },
+                long: {
+                    starter : prevTimerData["long"].starter,
+                    now : prevTimerData["long"].starter
+                }
+            }
+        })
+    }
 
     React.useEffect(() => {
+        refillTimers();
         setPause(false);
     },[state]);
 
@@ -58,6 +97,25 @@ function Pomodoro(){
             setPause(prevPause => !prevPause);
         }
     }
+
+    function changeFont(index){
+        setTheme(prevTheme => {
+            return {
+                ...prevTheme,
+                font: index
+            }
+        })
+    }
+
+    function changeColor(index){
+        setTheme(prevTheme => {
+            return {
+                ...prevTheme,
+                bgColors: index
+            }
+        })
+    }
+
     return(
         <ThemeProvider theme={theme}>
             <Page>
@@ -84,7 +142,7 @@ function Pomodoro(){
                             {(Math.floor(timerData[state].now % 60)) < 10 ? "0" + (Math.floor(timerData[state].now % 60)) : (Math.floor(timerData[state].now % 60))}</TimerText>
 
 
-                            : <TimerText textAnchor="middle" x="62.5" y="80" >00:00</TimerText>
+                            : <TimerText textAnchor="middle" x="62.5" y="85" >00:00</TimerText>
                             }
 
                             <StateText onClick={changeState} textAnchor="middle" x="65" y="98" >{pause ? "START" : "PAUSE"}</StateText>
@@ -114,6 +172,21 @@ function Pomodoro(){
                                     <TimeInput type="long" setTimerData={setTimerData} timerData={timerData} title="long break"/>
                                 </TimeInputContainer>
                             </TimeSelectionContainer>
+
+                            <FontSelectionContainer>
+                                <FontSelectionTitle>FONT</FontSelectionTitle>
+                                <FontSelectionButton onClick={() => changeFont(0)} selected={theme.font === 0} font={0}>Aa</FontSelectionButton>
+                                <FontSelectionButton onClick={() => changeFont(1)} selected={theme.font === 1} font={1}>Aa</FontSelectionButton>
+                                <FontSelectionButton onClick={() => changeFont(2)} selected={theme.font === 2} font={2}>Aa</FontSelectionButton>
+                            </FontSelectionContainer>
+
+                            <ColorSelectionContainer>
+                                <ColorSelectionTitle>COLOR</ColorSelectionTitle>
+                                <ColorSelectionButton onClick={() => changeColor(0)} selected={theme.bgColors === 0} color={0} checkIcon={checkIcon}></ColorSelectionButton>
+                                <ColorSelectionButton onClick={() => changeColor(1)} selected={theme.bgColors === 1} color={1} checkIcon={checkIcon}></ColorSelectionButton>
+                                <ColorSelectionButton onClick={() => changeColor(2)} selected={theme.bgColors === 2} color={2} checkIcon={checkIcon}></ColorSelectionButton>
+                            </ColorSelectionContainer>
+                            <ApplySettingsButton onClick={() => {refillTimers(); setDisplaySettings(false)}} color={theme.bgColors} font={theme.font}>Apply</ApplySettingsButton>
                         </SettingsContainer>
                     </>}
                 </Container>

@@ -108,7 +108,7 @@ export const TimerText = styled.text`
     fill:#D7E0FF;
     font-family: ${({ theme }) => themeFonts[theme.font] || "arial"};
     font-weight: 700;
-    font-size: 32px;
+    font-size: 30px;
     text-align: center;
     letter-spacing: -1px;
     user-select: none;
@@ -155,7 +155,7 @@ export const SettingsFog = styled.div`
 
 export const SettingsContainer = styled.div`
     max-width: 540px;
-    max-height: 490px;
+    max-height: 464px;
     width:100%;
     height:100%;
 
@@ -171,7 +171,6 @@ export const SettingsContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    overflow: hidden;
 `
 
 export const HeaderContainer = styled.div`
@@ -184,12 +183,12 @@ export const HeaderContainer = styled.div`
     margin-bottom: 28px;
     &:after{
         content: "";
-        width:200%;
+        width:calc(70px + 100%);
         height:1px;
         background-color: #E3E1E1;
         position: absolute;
         bottom: 0;
-        left:-100px;
+        left:-35px;
     }
 `
 
@@ -240,4 +239,122 @@ export const TimeInputContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     gap:20px;
+    position: relative;
+    padding-bottom: 25px;
+    &:after{
+        position: absolute;
+        left:0;
+        bottom: 0;
+        content: "";
+        width:100%;
+        height:1px;
+        background-color: #E3E1E1;
+    }
+`
+
+export const FontSelectionContainer = styled.div`
+    padding-top: 25px;
+    width:100%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:16px;
+    position: relative;
+    padding-bottom: 25px;
+    &:after{
+        position: absolute;
+        left:0;
+        bottom: 0;
+        content: "";
+        width:100%;
+        height:1px;
+        background-color: #E3E1E1;
+    }
+`
+
+export const FontSelectionTitle = styled.p`
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 5px;
+    flex:auto;
+
+    color: #161932;
+`
+
+export const FontSelectionButton = styled.button`
+    background-color: #EFF1FA;
+    width: 40px;
+    height: 40px;
+
+    font-family: ${({ font }) => themeFonts[font] || "sans-serif"};
+    font-style: normal;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #1E213F;
+
+    mix-blend-mode: normal;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    ${({ selected }) => selected && `
+        background-color:black;
+        color:white;
+    `}
+`
+
+export const ColorSelectionContainer = styled(FontSelectionContainer)`
+    &:after{
+        background-color: transparent;
+    }
+`
+
+export const ColorSelectionTitle = styled(FontSelectionTitle)`
+
+`
+
+export const ColorSelectionButton = styled(FontSelectionButton)`
+    background-color:${({ color }) => themeBGColors[color] || "red"};
+    position:relative;
+    ${({ selected,checkIcon }) => selected && `
+        &:after{
+            width:15px;
+            content:url(${checkIcon});
+            position:absolute;
+            top:32%;
+            left:50%;
+            transform:translate(-50%);
+        }
+    `}
+`
+
+export const ApplySettingsButton = styled.button`
+    max-width:140px;
+    width:100%;
+    padding:15px 0px;
+    transition:all 0.3s;
+    font-family: ${({ font }) => themeFonts[font] || "arial"};
+    background-color: ${({ color }) => themeBGColors[color] || "white"};
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    /* identical to box height */
+    text-align: center;
+
+    color: #FFFFFF;
+
+    border-radius: 25px;
+    position:absolute;
+    bottom:-20px;
+    left:50%;
+    transform:translateX(-50%);
+    
+    cursor:pointer;
+    &:hover{
+        filter:brightness(1.3);
+    }
 `
