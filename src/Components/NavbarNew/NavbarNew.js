@@ -43,6 +43,7 @@ function NavbarNew(){
                 <DropdownItem>Advanced</DropdownItem>
                 <DropdownMenu>
                     <NavLink onClick={toggleMenu} to="main/rockpaperscissors">Rock Paper Scissors</NavLink>
+                    <NavLink onClick={toggleMenu} to="main/pomodoro">Pomodoro</NavLink>
                 </DropdownMenu>
             </Dropdown>
 

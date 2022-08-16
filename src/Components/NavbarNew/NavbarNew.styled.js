@@ -14,7 +14,6 @@ export const Container = styled.nav`
     top:-2px;
     left:50%;
     transform: translate(-50%);
-    transition:all 0.3s;
     border-radius: 0 0 10px 10px;
     padding:20px;
     z-index:2000;
