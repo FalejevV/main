@@ -176,12 +176,12 @@ function Pomodoro(){
                                 a 40 40 0 0 1 0 -105
                                 " />
                             {timerData[state].now > 0 ? 
-                            <TimerText textAnchor="middle" x="62.5" y="85" >{Math.floor(timerData[state].now / 60) < 10 ? "0" + Math.floor(timerData[state].now / 60) : Math.floor(timerData[state].now / 60)}
+                            <TimerText textAnchor="middle" x="62.5" y="73" >{Math.floor(timerData[state].now / 60) < 10 ? "0" + Math.floor(timerData[state].now / 60) : Math.floor(timerData[state].now / 60)}
                             :
                             {(Math.floor(timerData[state].now % 60)) < 10 ? "0" + (Math.floor(timerData[state].now % 60)) : (Math.floor(timerData[state].now % 60))}</TimerText>
 
 
-                            : <TimerText textAnchor="middle" x="62.5" y="85" >00:00</TimerText>
+                            : <TimerText textAnchor="middle" x="62.5" y="73" >00:00</TimerText>
                             }
 
                             <StateText onClick={changeState} textAnchor="middle" x="65" y="98" >{finished ? "RESTART" : pause ? "START" : "PAUSE"}</StateText>
