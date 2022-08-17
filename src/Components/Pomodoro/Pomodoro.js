@@ -3,6 +3,13 @@ import { Container, Page, StateContainer, StateElement, StateText,TimerText, Svg
 import { ThemeProvider } from "styled-components";
 import TimeInput from "./TimeInput";
 import checkIcon from "./img/check-solid.svg";
+import startSound from "./StartSound.mp3";
+import pauseSound from "./PauseSound.flac";
+
+const startAudio = new Audio(startSound);
+startAudio.volume = 0.07;
+const pauseAudio = new Audio(pauseSound);
+pauseAudio.volume = 0.05;
 
 function Pomodoro(){
     const [theme,setTheme] = React.useState({
@@ -10,18 +17,19 @@ function Pomodoro(){
         font:0
     });
     const [state,setState] = React.useState("pomodoro");
+    const [firstLoad , setFirstLoad] = React.useState(true);
     const [timerData,setTimerData] = React.useState({
         pomodoro : {
-            starter: 5,
-            now: 5,
+            starter: 1500,
+            now: 1500,
         },
         short : {
-            starter: 3,
-            now: 3,
+            starter: 300,
+            now: 300,
         },
         long: {
-            starter: 6,
-            now: 6,
+            starter: 900,
+            now: 900,
         }
     }) 
 
@@ -29,11 +37,12 @@ function Pomodoro(){
 
     const [pause,setPause] = React.useState(true);
     const [displaySettings, setDisplaySettings] = React.useState(false);
+    const [finished, setFinished] = React.useState(false);
 
     let calcTimerStroke = timerData[state].now * 330 / timerData[state].starter -1;
     React.useEffect(() => {
         let timeout
-        if(!pause && timerData[state].now > -1){
+        if(!pause && timerData[state].now > -1 && !finished){
             timeout = setTimeout(() => {
                 setTimerData(prevTimerData => {
                     return {
@@ -52,11 +61,17 @@ function Pomodoro(){
                         setBreakCounter(prevCounter => prevCounter+1);
                         setState("short");
                     }else if (breakCounter >= 4){
-                        setBreakCounter(0);
+                        setBreakCounter(-1);
                         setState("long");
                     }
                 }else{
-                    setState("pomodoro");
+                    if(breakCounter === -1){
+                        setFinished(true);
+                        setPause(true);
+                        setState("pomodoro");
+                    }else{
+                        setState("pomodoro");
+                    }
                 }
             }
         }
@@ -65,7 +80,7 @@ function Pomodoro(){
                 clearTimeout(timeout);
             }
         }
-    },[state,pause,timerData, breakCounter]);
+    },[state,pause,timerData, breakCounter,finished]);
 
     function refillTimers(){
         setTimerData(prevTimerData => {
@@ -84,18 +99,42 @@ function Pomodoro(){
                     now : prevTimerData["long"].starter
                 }
             }
-        })
+        });
     }
 
     React.useEffect(() => {
+        if (firstLoad){
+            setPause(true);
+        }else{
+            refillTimers();
+            setPause(false);
+
+            if (state !== "pomodoro"){
+                pauseAudio.play();
+            }else{
+                startAudio.play();
+            }
+
+        }
+    },[state, firstLoad]);
+
+    function reset(){
         refillTimers();
-        setPause(false);
-    },[state]);
+        setBreakCounter(0);
+        setState("pomodoro");
+        setFinished(false);
+        setPause(true);
+    }
 
     function changeState(){
-        if(timerData[state].now > 0){
+        if(timerData[state].now > 0 && !finished){
             setPause(prevPause => !prevPause);
         }
+        if(finished){
+            reset();
+            setPause(false);
+        }
+        setFirstLoad(false);
     }
 
     function changeFont(index){
@@ -145,7 +184,7 @@ function Pomodoro(){
                             : <TimerText textAnchor="middle" x="62.5" y="85" >00:00</TimerText>
                             }
 
-                            <StateText onClick={changeState} textAnchor="middle" x="65" y="98" >{pause ? "START" : "PAUSE"}</StateText>
+                            <StateText onClick={changeState} textAnchor="middle" x="65" y="98" >{finished ? "RESTART" : pause ? "START" : "PAUSE"}</StateText>
 
                             </SvgCircle>
                         </TimerBackground>
@@ -155,7 +194,8 @@ function Pomodoro(){
                         <path fill="#D7E0FF" d="M26.965 17.682l-2.927-2.317c.055-.448.097-.903.097-1.365 0-.462-.042-.917-.097-1.365l2.934-2.317a.702.702 0 00.167-.896l-2.775-4.851a.683.683 0 00-.847-.301l-3.454 1.407a10.506 10.506 0 00-2.345-1.379l-.52-3.71A.716.716 0 0016.503 0h-5.55a.703.703 0 00-.687.588l-.52 3.71c-.847.357-1.63.819-2.345 1.379L3.947 4.27a.691.691 0 00-.847.301L.325 9.422a.705.705 0 00.167.896l2.927 2.317c-.055.448-.097.903-.097 1.365 0 .462.042.917.097 1.365L.492 17.682a.702.702 0 00-.167.896L3.1 23.429a.683.683 0 00.847.301L7.4 22.323a10.506 10.506 0 002.345 1.379l.52 3.71c.056.329.34.588.687.588h5.55a.703.703 0 00.687-.588l.52-3.71c.847-.357 1.631-.819 2.346-1.379l3.454 1.407c.313.119.673 0 .847-.301l2.775-4.851a.705.705 0 00-.167-.896zM13.73 18.9c-2.685 0-4.857-2.191-4.857-4.9 0-2.709 2.172-4.9 4.857-4.9 2.684 0 4.856 2.191 4.856 4.9 0 2.71-2.172 4.9-4.856 4.9z"/>
                     </SettingsSvg>
 
-                    {displaySettings && <>
+                    {displaySettings && 
+                    <>
                         <SettingsFog></SettingsFog>
                         <SettingsContainer>
                             <HeaderContainer>
@@ -186,7 +226,7 @@ function Pomodoro(){
                                 <ColorSelectionButton onClick={() => changeColor(1)} selected={theme.bgColors === 1} color={1} checkIcon={checkIcon}></ColorSelectionButton>
                                 <ColorSelectionButton onClick={() => changeColor(2)} selected={theme.bgColors === 2} color={2} checkIcon={checkIcon}></ColorSelectionButton>
                             </ColorSelectionContainer>
-                            <ApplySettingsButton onClick={() => {refillTimers(); setDisplaySettings(false)}} color={theme.bgColors} font={theme.font}>Apply</ApplySettingsButton>
+                            <ApplySettingsButton onClick={() => {reset(); setDisplaySettings(false)}} color={theme.bgColors} font={theme.font}>Apply</ApplySettingsButton>
                         </SettingsContainer>
                     </>}
                 </Container>

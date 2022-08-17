@@ -76,6 +76,11 @@ export const StateElement = styled.div`
             opacity:1;
         }
     `}
+
+    @media (max-width: 470px){
+        font-size: 12px;
+    }
+
 `
 
 export const TimerContainer = styled.div`
@@ -86,6 +91,11 @@ export const TimerContainer = styled.div`
     border-radius: 50%;
     padding: 22px;
     margin-bottom: 10px;
+    transition: all 0.3s;
+    @media (max-width: 470px){
+        width:300px;
+        height:300px;
+    }
 `
 
 export const TimerBackground = styled.div`
@@ -143,11 +153,13 @@ export const SettingsSvg = styled.svg`
     }
 `
 
+
 export const SettingsFog = styled.div`
     position: absolute;
     top:0;
     left:0;
     width:100%;
+    min-height: 100vh;
     height:100%;
     background-color: black;
     opacity: 0.6;
@@ -171,6 +183,14 @@ export const SettingsContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    transition: all 0.3s;
+
+    @media (max-width: 530px){
+        max-width:330px;
+        padding:25px 30px;
+        max-height: 550px;
+        top:45px;
+    }
 `
 
 export const HeaderContainer = styled.div`
@@ -190,6 +210,15 @@ export const HeaderContainer = styled.div`
         bottom: 0;
         left:-35px;
     }
+
+    @media (max-width: 530px){
+        &:after{
+            width:calc(55px + 100%);
+            left:-27px;
+        }
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+    }
 `
 
 export const SettingsTitle = styled.p`
@@ -201,6 +230,10 @@ export const SettingsTitle = styled.p`
 
     color: #161932;
     user-select: none;
+
+    @media (max-width: 530px){
+        font-size: 24px;
+    }
 `
 
 export const CloseSvg = styled.svg`
@@ -231,6 +264,9 @@ export const TimeSelectionTitle = styled.p`
 
     color: #161932;
     padding-bottom: 19px;
+    @media (max-width: 530px){
+        text-align: center;
+    }
 `
 
 export const TimeInputContainer = styled.div`
@@ -250,6 +286,14 @@ export const TimeInputContainer = styled.div`
         height:1px;
         background-color: #E3E1E1;
     }
+
+    @media (max-width: 530px){
+        flex-direction: column;
+        gap:10px;
+
+        padding-bottom: 20px;
+    }
+
 `
 
 export const FontSelectionContainer = styled.div`
@@ -270,6 +314,17 @@ export const FontSelectionContainer = styled.div`
         height:1px;
         background-color: #E3E1E1;
     }
+
+    @media (max-width: 530px){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 20px 1fr;
+        justify-content: center;
+        justify-items: center;
+        gap:15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 `
 
 export const FontSelectionTitle = styled.p`
@@ -281,6 +336,10 @@ export const FontSelectionTitle = styled.p`
     flex:auto;
 
     color: #161932;
+    @media (max-width: 530px){
+        grid-column: 1/4;
+        text-align: center;
+    }
 `
 
 export const FontSelectionButton = styled.button`

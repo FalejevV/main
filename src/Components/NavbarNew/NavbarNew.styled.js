@@ -18,7 +18,7 @@ export const Container = styled.nav`
     padding:20px;
     z-index:2000;
     top:-60px;
-
+    transition: all 0.3s;
     
     ${({ visible }) => visible && `
         top:-2px;

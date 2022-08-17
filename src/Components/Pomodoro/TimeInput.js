@@ -10,6 +10,13 @@ const Container = styled.div`
     align-items: center;
     max-width: 140px;
     width:100%;
+
+    @media (max-width: 530px){
+        max-width: unset;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
 `
 const InputTitle = styled.p`
     font-family: 'Kumbh Sans';
@@ -23,6 +30,10 @@ const InputTitle = styled.p`
     mix-blend-mode: normal;
     opacity: 0.4;
     padding-bottom: 5px;
+
+    @media (max-width: 530px){
+        font-size: 13px;
+    }
 `
 
 const InputFieldContainer = styled.div`
@@ -93,7 +104,7 @@ function TimeInput(props){
     function checkInput(event){
         let inputOk = true;
         event.target.value.split("").forEach(char => {
-            if(isNaN(char) || char === "." || char === ","){
+            if(isNaN(char)){
                 inputOk = false;
             }
         });
